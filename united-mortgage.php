@@ -1,19 +1,19 @@
 <?php
 /*
-Plugin Name: Vue Starter Plugin
-Plugin URI: https://example.com/
-Description: A WordPress Vue.js starter plugin
+Plugin Name: United Mortgage
+Plugin URI: https://unitedsettlement.com/
+Description: Mortage plugin for United settlement
 Version: 0.1
-Author: Your Name
-Author URI: https://example.com/
+Author: United settlement
+Author URI: https://unitedsettlement.com/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: baseplugin
+Text Domain: unitedmortgage
 Domain Path: /languages
 */
 
 /**
- * Copyright (c) YEAR Your Name (email: Email). All rights reserved.
+ * Copyright (c) 2018 https://unitedsettlement.com/ All rights reserved.
  *
  * Released under the GPL license
  * http://www.opensource.org/licenses/gpl-license.php
@@ -42,11 +42,11 @@ Domain Path: /languages
 if ( !defined( 'ABSPATH' ) ) exit;
 
 /**
- * Base_Plugin class
+ * United_Mortgage class
  *
- * @class Base_Plugin The class that holds the entire Base_Plugin plugin
+ * @class United_Mortgage The class that holds the entire United_Mortgage plugin
  */
-final class Base_Plugin {
+final class United_Mortgage {
 
     /**
      * Plugin version
@@ -63,7 +63,7 @@ final class Base_Plugin {
     private $container = array();
 
     /**
-     * Constructor for the Base_Plugin class
+     * Constructor for the United_Mortgage class
      *
      * Sets up all the appropriate hooks and actions
      * within our plugin.
@@ -79,16 +79,16 @@ final class Base_Plugin {
     }
 
     /**
-     * Initializes the Base_Plugin() class
+     * Initializes the United_Mortgage() class
      *
-     * Checks for an existing Base_Plugin() instance
+     * Checks for an existing United_Mortgage() instance
      * and if it doesn't find one, creates it.
      */
     public static function init() {
         static $instance = false;
 
         if ( ! $instance ) {
-            $instance = new Base_Plugin();
+            $instance = new United_Mortgage();
         }
 
         return $instance;
@@ -215,9 +215,9 @@ final class Base_Plugin {
      */
     public function init_classes() {
 
-        if ( $this->is_request( 'admin' ) ) {
-            $this->container['admin'] = new App\Admin();
-        }
+        // if ( $this->is_request( 'admin' ) ) {
+        //     $this->container['admin'] = new App\Admin();
+        // }
 
         if ( $this->is_request( 'frontend' ) ) {
             $this->container['frontend'] = new App\Frontend();
@@ -252,8 +252,8 @@ final class Base_Plugin {
      */
     private function is_request( $type ) {
         switch ( $type ) {
-            case 'admin' :
-                return is_admin();
+            // case 'admin' :
+            //     return is_admin();
 
             case 'ajax' :
                 return defined( 'DOING_AJAX' );
@@ -269,6 +269,6 @@ final class Base_Plugin {
         }
     }
 
-} // Base_Plugin
+} // United_Mortgage
 
-$baseplugin = Base_Plugin::init();
+$baseplugin = United_Mortgage::init();

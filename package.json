@@ -1,8 +1,8 @@
 {
-  "name": "vue-wp-starter",
+  "name": "united-mortgage",
   "version": "1.0.0",
-  "description": "A WordPress Vue.js starter plugin",
-  "author": "Tareq Hasan <tareq@wedevs.com>",
+  "description": "A WordPress mortgage calculator plugin",
+  "author": "Arif Pavel <pavelpatiya@gmail.com>",
   "license": "GPLv2",
   "private": true,
   "scripts": {
